@@ -38,6 +38,21 @@ const validar = (event) => {
     alert("llenar el campo contraseña ")
     nombre.focus();
   }
+
+}
+const validarText=(event)=>{
+  const regexTexto=/^[a-zA-Z]+$/;
+  if(!regexTexto.test(nombre)){
+    event.preventDefault();
+  }
+
+}
+const validarNum=(event)=>{
+  const regexNumeros=/^\[0-9]$/
+  if(!regexNumeros.test(documento)){
+    event.preventDefault();
+  }
 }
 // Eventos
+nombre
 formulario.addEventListener("submit",validar);
