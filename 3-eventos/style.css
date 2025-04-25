@@ -130,7 +130,14 @@ input {
   font-size: 1rem;
   color: var(--sycamore);
 }
-
+.input__border{
+  border-color: red;
+}
+.span{
+  color: #8C7C3C;
+  
+  margin-left: 20px;
+}
 button {
   display: block;
   width: 90%;
@@ -169,4 +176,8 @@ button:hover {
 .btn:hover {
   background: var(--heavyMetal);
   color: var(--starship);
+}
+.politicas{
+  margin-left: 20px;
+
 }
