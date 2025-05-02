@@ -177,7 +177,33 @@ button:hover {
   background: var(--heavyMetal);
   color: var(--starship);
 }
-.politicas{
-  margin-left: 20px;
+.ciudades{
+    display: block;
+  width: 90%;
+  padding: calc(var(--padding) + 4px);
+  margin: var(--margin) auto;
+  border: solid 1px var(--heavyMetal);
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  color: var(--sycamore);
+}
+/* .title__generos{
 
+} */
+.generos{
+   display: flex;
+  flex-direction: row ;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+
+
+.habilidades label{
+  display: block;
+}
+
+.habilidades label input, .politicas{
+  width: min-content;
+  display: inline-block;
 }

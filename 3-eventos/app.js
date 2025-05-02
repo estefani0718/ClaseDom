@@ -4,8 +4,8 @@ import { validar } from "./modulo.js";
 const formulario = document.querySelector("form")
 const nombre = document.querySelector('[name="nombre"]');
 const apellido = document.querySelector('[name="apellido"]');
-const telefono = document.querySelector('[name="telefono"]');
-const documento = document.querySelector('[name="documento"]');
+const telefono = document.querySelector('[name="Telefono"]');
+const documento = document.querySelector('[name="Documento"]');
 const usuario = document.querySelector('[name="usuario"]');
 const contrasena = document.querySelector('[name="contrasena"]');
 const pol = document.querySelector("#politicas");
@@ -51,14 +51,21 @@ const politicas = () => {
        boton.removeAttribute("disable")
       }
   })
- }
+}
+
+const Isvalid = (e)=>{
+  let data = validar(e);
+  console.log(data)
+
+}
 
 // Eventos
-formulario.addEventListener("submit", validar );
+formulario.addEventListener("submit", Isvalid);
+
 nombre.addEventListener("blur", campo);
 apellido.addEventListener("blur", campo);
-// telefono.addEventListener("blur", campo);
-// documento.addEventListener("blur", campo);
+telefono.addEventListener("blur", campo);
+documento.addEventListener("blur", campo);
 
 nombre.addEventListener("keydown", validarText);
 apellido.addEventListener("keydown", validarText);
