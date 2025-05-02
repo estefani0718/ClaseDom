@@ -78,7 +78,8 @@
 
 export const validar = (e) => {
   e.preventDefault();
-  
+  const objeto =new Object;
+    
  //  let hijos=e.target.children
  //todos lo que sean requeridos
   const campos = [...e.target].filter((hijos) => {
@@ -106,10 +107,14 @@ export const validar = (e) => {
       span.textContent = "llenar campo vacio ";
       campo.insertAdjacentElement("afterend",span)
     }
-    console.log(campo.selectedIndex);
-    
-   })
+    // console.log(campo.selectedIndex);
+    if (!campo.value==""){
+        objeto={};
+        console.log("captado",objeto);
+    }
   
+   })
+   
    
 
  
