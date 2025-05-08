@@ -1,4 +1,4 @@
-import { validar } from "./modulo.js";
+import { validar } from "./modulos/modulo.js";
 //validarCamporVacios,
 // variables
 const formulario = document.querySelector("form")
@@ -14,54 +14,11 @@ const boton = document.querySelector("btn_validar");
 // const btn = document.querySelector("#btn_validar");
 
 //funciones
-const validarText = (event) => {
-  let letra = event.key;
-  const regexTexto=/^[a-zA-Z]+$/;
-  if(!regexTexto.test(letra)){
-    event.preventDefault();
-  }
 
-}
-const validarNum = (event) => {
-  let letra = event.key;
-  const regexNumeros=/^\[0-9]$/
-  if(!regexNumeros.test(letra)){
-    event.preventDefault();
-  }
-}
-// const validarContaseña = (event) => {
-//   let letra = event.key;
-
-// }
-const campo=(event)=>{
-  if (event.target.value !== "") {
-    event.target.classList.remove("input__border")
-    if (event.target.nextElementSibling) {
-      event.target.nextElementSibling.remove()
-    }
-  }
-}
-
-const politicas = () => {
-    addEventListener("DOMContentLoaded", (event) => {
-    if (!pol.checked) {
-       boton.setAttribute("disable","")
-      }
-    else {
-       boton.removeAttribute("disable")
-      }
-  })
-}
-
-const Isvalid = (e)=>{
-  let data = validar(e);
-  console.log(data)
-
-}
 
 // Eventos
 formulario.addEventListener("submit", Isvalid);
-
+formulario
 nombre.addEventListener("blur", campo);
 apellido.addEventListener("blur", campo);
 telefono.addEventListener("blur", campo);
@@ -69,10 +26,10 @@ documento.addEventListener("blur", campo);
 
 nombre.addEventListener("keydown", validarText);
 apellido.addEventListener("keydown", validarText);
-// telefono.addEventListener("keydown", validarNum);
-// documento.addEventListener("keydown", validarNum);
+telefono.addEventListener("keydown", validarNum);
+documento.addEventListener("keydown", validarNum);
 usuario.addEventListener("keydown",validarText);
-// contrasena.addEventListener("keydown",);
+contrasena.addEventListener("keydown",validarContaseña);
 
-addEventListener("DOMContentLoaded", politicas);
+// addEventListener("DOMContentLoaded", politicas);
 pol.addEventListener("change",politicas)
